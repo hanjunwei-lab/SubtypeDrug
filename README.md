@@ -8,7 +8,8 @@ A systematic biology tool was developed to prioritize cancer subtype-specific dr
 install.packages("SubtypeDrug") 
 
 # Install from Githhub
-library(devtools); 
+library(devtools);  
+
 install_github("hanjunwei-lab/SubtypeDrug")
 
 # Load into the environment
