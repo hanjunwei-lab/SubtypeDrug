@@ -15,4 +15,4 @@ install.packages("SubtypeDrug")
 library(SubtypeDrug)
 ```
 
-`SubtypeDrug` is published in Bioinformatics. Please cite the following article when using `SubtypeDrug`: https://doi.org/10.1093/bioinformatics/btab011.
+The `SubtypeDrug` is published in Bioinformatics. Please cite the following article when using `SubtypeDrug`: https://doi.org/10.1093/bioinformatics/btab011.
