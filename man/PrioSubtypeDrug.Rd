@@ -118,7 +118,7 @@ require(parallel)
 ## Get simulated breast cancer gene expression profile data.
 Geneexp<-get("Geneexp")
 ## Obtain sample subtype data and calculate breast cancer subtype-specific drugs.
-\donttest{Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")}
+Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")
 
 ## Subpathway list data and drug subpathway association data
 ## were stored in packet `SubtypeDrugData`.
@@ -130,20 +130,20 @@ Geneexp<-get("Geneexp")
 ## users can use the following command to get the data.
 ## Get subpathway list data.
 ## If the gene expression profile contains gene Symbol.
-\donttest{data(SpwSymbolList)}
+## data(SpwSymbolList)
 ## If the gene expression profile contains gene Entrezid.
-\donttest{data(SpwEntrezidList)}
+## data(SpwEntrezidList)
 ## Get drug subpathway association data.
-\donttest{data(DrugSpwData)}
+## data(DrugSpwData)
 
 ## Identify breast subtype-specific drugs.
-\donttest{Subtype_drugs<-PrioSubtypeDrug(Geneexp,Subtype,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
-                                         E_FDR=1,S_FDR=1)}
+## Subtype_drugs<-PrioSubtypeDrug(Geneexp,Subtype,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
+##                                       E_FDR=1,S_FDR=1)
 
 ## Identify breast cancer-related drugs in only two types of samples: breast cancer and control.
 Cancer<-system.file("extdata", "Cancer_normal_labels.cls", package = "SubtypeDrug")
-\donttest{Disease_drugs<-PrioSubtypeDrug(Geneexp,Cancer,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
-                                         E_FDR=1,S_FDR=1)}
+## Disease_drugs<-PrioSubtypeDrug(Geneexp,Cancer,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
+##                                       E_FDR=1,S_FDR=1)
 
 ## The function PrioSubtypeDrug() can also support user-defined data.
 Geneexp<-get("GeneexpT")

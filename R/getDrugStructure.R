@@ -12,11 +12,11 @@
 ##' Junwei Han,
 ##' Chonghui Liu
 ##' @examples
-##' \donttest{require(rvest)}
-##' \donttest{require(ChemmineR)}
+##' require(rvest)
+##' require(ChemmineR)
 ##' # Plot the chemical structure of drug pirenperone.
-##' \donttest{Chem_str<-getDrugStructure(drug.label="pirenperone.")}
-##' \donttest{plot(Chem_str)}
+##' # Chem_str<-getDrugStructure(drug.label="pirenperone.")
+##' # plot(Chem_str)
 ##' @importFrom ChemmineR read.SDFset
 ##' @importFrom rvest html_text
 ##' @importFrom xml2 read_html
@@ -41,7 +41,7 @@ getDrugStructure<-function(drug.label="",main="",sub=""){
   if ('try-error' %in% class(cw)){
     stop("Please ensure smooth network connection")
   }
-  #drugnr<-read_html(drug_url)
+
   drugnr<-html_text(cw)
   drugnr<-strsplit(drugnr,"\n")
   drugnr<-unlist(drugnr)

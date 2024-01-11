@@ -20,7 +20,7 @@ the program will prompt the user.
 isPackageLoaded
 }
 \examples{
-\donttest{isPackageLoaded("pheatmap")}
+isPackageLoaded("pheatmap")
 }
 \author{
 Xudong Han,

@@ -1,7 +1,7 @@
 Package: SubtypeDrug
 Type: Package
 Title: Prioritization of Candidate Cancer Subtype Specific Drugs
-Version: 0.1.4
+Version: 0.1.6
 Author: Xudong Han,
   Junwei Han,
   Chonghui Liu
@@ -15,10 +15,13 @@ Depends: R (>= 2.10)
 Encoding: UTF-8
 LazyData: true
 BugReports: https://github.com/hanjunwei-lab/SubtypeDrug/issues
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Imports:
-        BiocGenerics,GSVA,grDevices,graphics,igraph,parallel,pheatmap,rvest,stats,xml2,devtools,ChemmineR
-Suggests: knitr, rmarkdown
+        BiocGenerics,GSVA,grDevices,graphics,igraph,parallel,pheatmap,rvest,stats,xml2,ChemmineR
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-01-22 08:14:35 UTC; 12859
+Packaged: 2024-01-10 11:37:47 UTC; 12859
+Repository: CRAN
+Date/Publication: 2021-05-17 08:50:03 UTC
+Config/testthat/edition: 3

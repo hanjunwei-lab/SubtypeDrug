@@ -8,12 +8,13 @@
 ##' @param weighted.score A binary value of 0 or 1. If the `weighted.score` = 1, the drug reverse association score will be weighted by the subpathway activity.
 ##' @return A matrix.
 ##' @examples
-##' \donttest{require(GSVA)}
-##' \donttest{Geneexp<-get("GeneexpT")}
-##' \donttest{UserDS<-get("UserDST")}
-##' \donttest{UserGS<-get("UserGST")}
-##' \donttest{spw_matrix<-gsva(Geneexp,UserGS,verbose=F)}
-##' \donttest{x<-getDrugMatrix(spw_matrix,UserDS,weighted.score=1)}
+##' require(GSVA)
+##' Geneexp<-get("GeneexpT")
+##' UserDS<-get("UserDST")
+##' UserGS<-get("UserGST")
+##' gsvapar <- gsvaParam(Geneexp, UserGS)
+##' spw_matrix<-gsva(gsvapar)
+##' x<-getDrugMatrix(spw_matrix,UserDS,weighted.score=FALSE)
 ##' @author Xudong Han,
 ##' Junwei Han,
 ##' Chonghui Liu

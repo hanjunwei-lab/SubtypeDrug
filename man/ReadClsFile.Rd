@@ -19,8 +19,8 @@ These are function read sample label file (.cls format).
 ReadClsFile
 }
 \examples{
-\donttest{Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")}
-\donttest{x<-ReadClsFile(Subtype)}
+Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")
+x<-ReadClsFile(Subtype)
 }
 \author{
 Xudong Han,

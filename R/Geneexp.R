@@ -4,5 +4,5 @@
 #'
 #' @format A matrix with 3000 genes and 40 samples.
 #' @examples
-#' \donttest{data(Geneexp)}
+#' data(Geneexp)
 "Geneexp"

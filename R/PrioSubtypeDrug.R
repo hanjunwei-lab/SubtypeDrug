@@ -72,7 +72,7 @@
 ##' ## Get simulated breast cancer gene expression profile data.
 ##' Geneexp<-get("Geneexp")
 ##' ## Obtain sample subtype data and calculate breast cancer subtype-specific drugs.
-##' \donttest{Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")}
+##' Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")
 ##'
 ##' ## Subpathway list data and drug subpathway association data
 ##' ## were stored in packet `SubtypeDrugData`.
@@ -84,20 +84,20 @@
 ##' ## users can use the following command to get the data.
 ##' ## Get subpathway list data.
 ##' ## If the gene expression profile contains gene Symbol.
-##' \donttest{data(SpwSymbolList)}
+##' ## data(SpwSymbolList)
 ##' ## If the gene expression profile contains gene Entrezid.
-##' \donttest{data(SpwEntrezidList)}
+##' ## data(SpwEntrezidList)
 ##' ## Get drug subpathway association data.
-##' \donttest{data(DrugSpwData)}
+##' ## data(DrugSpwData)
 ##'
 ##' ## Identify breast subtype-specific drugs.
-##' \donttest{Subtype_drugs<-PrioSubtypeDrug(Geneexp,Subtype,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
-##'                                          E_FDR=1,S_FDR=1)}
+##' ## Subtype_drugs<-PrioSubtypeDrug(Geneexp,Subtype,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
+##' ##                                       E_FDR=1,S_FDR=1)
 ##'
 ##' ## Identify breast cancer-related drugs in only two types of samples: breast cancer and control.
 ##' Cancer<-system.file("extdata", "Cancer_normal_labels.cls", package = "SubtypeDrug")
-##' \donttest{Disease_drugs<-PrioSubtypeDrug(Geneexp,Cancer,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
-##'                                          E_FDR=1,S_FDR=1)}
+##' ## Disease_drugs<-PrioSubtypeDrug(Geneexp,Cancer,"Control",SpwSymbolList,drug.spw.data=DrugSpwData,
+##' ##                                       E_FDR=1,S_FDR=1)
 ##'
 ##' ## The function PrioSubtypeDrug() can also support user-defined data.
 ##' Geneexp<-get("GeneexpT")
@@ -116,6 +116,8 @@
 ##' @importFrom parallel clusterExport
 ##' @importFrom parallel stopCluster
 ##' @importFrom GSVA gsva
+##' @importFrom GSVA ssgseaParam
+##' @importFrom GSVA gsvaParam
 ##' @importFrom stats p.adjust
 ##' @importFrom stats pnorm
 ##' @export
@@ -134,10 +136,13 @@ PrioSubtypeDrug<-function(expr,input.cls="",control.label="",subpathway.list,
   if(haveParallel==FALSE){
     stop("The 'parallel' library, should be loaded first")
   }
+  if(spw.score.method=="ssgsea"){
+    gsvaPar <- ssgseaParam(expr, subpathway.list)
+  }else{
+    gsvaPar <- gsvaParam(expr, subpathway.list,kcdf=kcdf,minSize=spw.min.sz,maxSize=spw.max.sz)
+  }
 
-  spw_matrix_y<-gsva(expr,subpathway.list,method=spw.score.method,kcdf=kcdf,
-                     min.sz=spw.min.sz,max.sz=spw.max.sz,
-                     parallel.sz=parallel.sz,verbose=FALSE)
+  spw_matrix_y<-gsva(gsvaPar)
   spw_matrix_rnames<-row.names(spw_matrix_y)
   sampleid<-colnames(spw_matrix_y)
 

@@ -34,12 +34,12 @@ and down-regulatory subpathway data of drug is obtained.
 getDrugSpw
 }
 \examples{
-\donttest{require(GSVA)}
-\donttest{Geneexp<-get("Geneexp")}
-\donttest{UserGS<-get("UserGS")}
-\donttest{UserDS<-get("UserDS")}
-\donttest{spw_matrix<-gsva(Geneexp,UserGS,verbose=F)}
-\donttest{x<-getDrugSpw(UserDS,row.names(spw_matrix),0.05,1,100)}
+require(GSVA)
+Geneexp<-get("Geneexp")
+UserGS<-get("UserGS")
+UserDS<-get("UserDS")
+spw_matrix<-gsva(Geneexp,UserGS,verbose=FALSE)
+x<-getDrugSpw(UserDS,row.names(spw_matrix),0.05,1,100)
 }
 \author{
 Xudong Han,

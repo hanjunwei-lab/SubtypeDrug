@@ -21,8 +21,8 @@ Infering patient-specific subpathway activity profiles.
 AccumulateNormal
 }
 \examples{
-\donttest{x<-matrix(c(1:10),ncol = 5)}
-\donttest{x1<-AccumulateNormal(x,c(3,5))}
+x<-matrix(c(1:10),ncol = 5)
+x1<-AccumulateNormal(x,c(3,5))
 }
 \author{
 Xudong Han,

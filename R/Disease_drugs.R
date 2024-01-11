@@ -11,5 +11,5 @@
 #' 	\item Parameter Parameter of the function PrioSubtypeDrug
 #' }
 #' @examples
-#' \donttest{data(Disease_drugs)}
+#' # data(Disease_drugs)
  "Disease_drugs"

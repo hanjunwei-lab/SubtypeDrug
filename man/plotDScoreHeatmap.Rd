@@ -83,8 +83,8 @@ require(pheatmap)
 ## The data is based on the simulated breast cancer subtype data.
 Subtype_drugs<-get("Subtype_drugs")
 ## Heat map of all subtype-specific drugs.
-\donttest{plotDScoreHeatmap(data=Subtype_drugs,E_Pvalue.th=0.05,
-                            S_Pvalue.th=0.05)}
+#plotDScoreHeatmap(data=Subtype_drugs,E_Pvalue.th=0.05,
+#                           S_Pvalue.th=0.05)
 ## Plot only Basal subtype-specific drugs.
 plotDScoreHeatmap(Subtype_drugs,subtype.label="Basal",SDS="all",E_Pvalue.th=0.05,
                   E_FDR.t=1,S_Pvalue.th=0.05,S_FDR.th=1)

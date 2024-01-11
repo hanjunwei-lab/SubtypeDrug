@@ -14,6 +14,6 @@ Geneexp
 Simulated normalized gene expression profile data.
 }
 \examples{
-\donttest{data(Geneexp)}
+data(Geneexp)
 }
 \keyword{datasets}

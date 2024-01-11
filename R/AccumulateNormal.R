@@ -12,8 +12,8 @@
 ##' Junwei Han,
 ##' Chonghui Liu
 ##' @examples
-##' \donttest{x<-matrix(c(1:10),ncol = 5)}
-##' \donttest{x1<-AccumulateNormal(x,c(3,5))}
+##' x<-matrix(c(1:10),ncol = 5)
+##' x1<-AccumulateNormal(x,c(3,5))
 ##' @export
 AccumulateNormal<-function(x_matrix,control_index){
   control_matrix<-x_matrix[,control_index]

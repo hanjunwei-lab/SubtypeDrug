@@ -6,8 +6,8 @@
 ##' @param file Input sample subtype class vector file in CLS format.
 ##' @return a list
 ##' @examples
-##' \donttest{Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")}
-##' \donttest{x<-ReadClsFile(Subtype)}
+##' Subtype<-system.file("extdata", "Subtype_labels.cls", package = "SubtypeDrug")
+##' x<-ReadClsFile(Subtype)
 ##' @author Xudong Han,
 ##' Junwei Han,
 ##' Chonghui Liu

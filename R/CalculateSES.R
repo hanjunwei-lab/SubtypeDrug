@@ -10,7 +10,7 @@
 ##' Junwei Han,
 ##' Chonghui Liu
 ##' @examples
-##' \donttest{x<-CalculateSES(sample(c(0,1),10,replace = T),c(1:10))}
+##' x<-CalculateSES(sample(c(0,1),10,replace = TRUE),c(1:10))
 ##' @export
 CalculateSES<-function(labels.list,correl.vector = NULL){
   tag.indicator <- labels.list

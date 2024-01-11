@@ -10,7 +10,7 @@
 ##' Junwei Han,
 ##' Chonghui Liu
 ##' @examples
-##' \donttest{isPackageLoaded("pheatmap")}
+##' isPackageLoaded("pheatmap")
 ##' @export
 isPackageLoaded <- function(name) {
   ## Purpose: is package 'name' loaded?

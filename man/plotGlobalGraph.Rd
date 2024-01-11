@@ -54,9 +54,9 @@ plotGlobalGraph
 \examples{
 ## Get the result data of PrioSubtypeDrug().
 ## The data is based on the simulated breast cancer subtype data.
-\donttest{Subtype_drugs<-get("Subtype_drugs")}
+Subtype_drugs<-get("Subtype_drugs")
 ## Plot a global graph of the drug pirenperone(1.02e-05M).
-\donttest{plotGlobalGraph(data=Subtype_drugs,drug.label="pirenperone(1.02e-05M)")}
+plotGlobalGraph(data=Subtype_drugs,drug.label="pirenperone(1.02e-05M)")
 }
 \author{
 Xudong Han,

@@ -11,12 +11,12 @@
 ##' @param drug.max.sz A numeric. Similar to parameter `drug.spw.min.sz`, drugs with more than `drug.spw.max.sz` up- or down-regulated subpathways are removed.
 ##' @return a list.
 ##' @examples
-##' \donttest{require(GSVA)}
-##' \donttest{Geneexp<-get("Geneexp")}
-##' \donttest{UserGS<-get("UserGS")}
-##' \donttest{UserDS<-get("UserDS")}
-##' \donttest{spw_matrix<-gsva(Geneexp,UserGS,verbose=F)}
-##' \donttest{x<-getDrugSpw(UserDS,row.names(spw_matrix),0.05,1,100)}
+##' require(GSVA)
+##' Geneexp<-get("Geneexp")
+##' UserGS<-get("UserGS")
+##' UserDS<-get("UserDS")
+##' spw_matrix<-gsva(Geneexp,UserGS,verbose=FALSE)
+##' x<-getDrugSpw(UserDS,row.names(spw_matrix),0.05,1,100)
 ##' @author Xudong Han,
 ##' Junwei Han,
 ##' Chonghui Liu

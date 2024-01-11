@@ -15,5 +15,5 @@
 #' 	\item Parameter Parameter of the function OCSSD
 #' }
 #' @examples
-#' \donttest{data(Subtype_drugs)}
+#' # data(Subtype_drugs)
  "Subtype_drugs"

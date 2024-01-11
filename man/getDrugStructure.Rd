@@ -24,11 +24,11 @@ drug or compound based on the input drug label by the user. The results can be v
 getDrugStructure
 }
 \examples{
-\donttest{require(rvest)}
-\donttest{require(ChemmineR)}
+require(rvest)
+require(ChemmineR)
 # Plot the chemical structure of drug pirenperone.
-\donttest{Chem_str<-getDrugStructure(drug.label="pirenperone.")}
-\donttest{plot(Chem_str)}
+# Chem_str<-getDrugStructure(drug.label="pirenperone.")
+# plot(Chem_str)
 }
 \author{
 Xudong Han,

@@ -35,8 +35,8 @@
 ##' Subtype_drugs<-get("Subtype_drugs")
 ##' plotDSpwHeatmap(data=Subtype_drugs,drug.label="pirenperone(1.02e-05M)",subtype.label="Basal")
 ##' ##Visualize the results of only two types of samples.
-##' \donttest{Disease_drugs<-get("Disease_drugs")}
-##' \donttest{plotDSpwHeatmap(data=Disease_drugs,drug.label="W-13(1e-05M)",subtype.label="Cancer")}
+##' Disease_drugs<-get("Disease_drugs")
+##' plotDSpwHeatmap(data=Disease_drugs,drug.label="W-13(1e-05M)",subtype.label="Cancer")
 ##' @importFrom pheatmap pheatmap
 ##' @importFrom stats na.omit
 ##' @export

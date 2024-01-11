@@ -23,12 +23,13 @@ Obtaining drug-disease reverse association score matrix.
 getDrugMatrix
 }
 \examples{
-\donttest{require(GSVA)}
-\donttest{Geneexp<-get("GeneexpT")}
-\donttest{UserDS<-get("UserDST")}
-\donttest{UserGS<-get("UserGST")}
-\donttest{spw_matrix<-gsva(Geneexp,UserGS,verbose=F)}
-\donttest{x<-getDrugMatrix(spw_matrix,UserDS,weighted.score=1)}
+require(GSVA)
+Geneexp<-get("GeneexpT")
+UserDS<-get("UserDST")
+UserGS<-get("UserGST")
+gsvapar <- gsvaParam(Geneexp, UserGS)
+spw_matrix<-gsva(gsvapar)
+x<-getDrugMatrix(spw_matrix,UserDS,weighted.score=FALSE)
 }
 \author{
 Xudong Han,
